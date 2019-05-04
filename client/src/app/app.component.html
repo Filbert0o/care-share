@@ -2,7 +2,7 @@
   <mat-toolbar class="menu-toolbar">
     <button mat-icon-button class="d-md-none" (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
     <a class="nav-link" routerLink="/">
-      <h1 class="app-name">PureStories</h1>
+      <h1 class="app-name">Care Share</h1>
     </a>
     <span class="spacer"></span>
 
@@ -10,11 +10,11 @@
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-    
+
     </mat-menu>
 
     <span class="toolbar-spacer"></span>
-    
+
     <ng-template [ngIf]="!auth.loggingIn">
       <button *ngIf="!auth.loggedIn" class='btn btn-primary' (click)="auth.login()">Log In</button>
       <span *ngIf="auth.loggedIn && auth.userProfile">
@@ -29,7 +29,7 @@
   <mat-sidenav-container class="example-sidenav-container ">
     <mat-sidenav #snav mode="over">
       <mat-nav-list>
-    
+
       </mat-nav-list>
     </mat-sidenav>
 

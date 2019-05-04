@@ -11,7 +11,7 @@ export const environment = {
            clientID: "VANeB8AM0hUWxi3YLpYlrUj0uTg7FoAF",
            domain: "gojitodo.auth0.com",
            audience: "http://localhost:3001/api",
-           redirect: "http://localhost:4500/callback",
+           redirect: "http://localhost:4200/callback",
            scope: "openid profile user_metadata app_metadata email"
          }
        };

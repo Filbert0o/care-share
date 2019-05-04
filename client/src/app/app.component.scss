@@ -16,25 +16,25 @@
     flex: 1 1 auto;
   }
 
-  .nav-color {
-    color: #E5E5E5;
-  }
-  
+  // .nav-color {
+  //   color: #E5E5E5;
+  // }
+
 
 
   .menu-toolbar {
     background-color: #404040;
     color: #E5E5E5;
   }
-  
-  
-  
+
+
+
   .example-sidenav-container {
     /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
     flex: 1;
   }
-  
+
   .example-is-mobile .example-sidenav-container {
     /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
        `<body>` to be our scrolling element for mobile layouts. */
@@ -50,10 +50,10 @@
     margin-left: 8px;
     color: #E5E5E5;
   }
-  
+
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-body { 
+body {
   font-family: Roboto, Arial, sans-serif;
   margin: 0;
 }
