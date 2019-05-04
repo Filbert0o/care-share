@@ -157,7 +157,7 @@ export class AuthService {
     // End Auth0 authentication session
     this._auth0.logout({
       clientId: AUTH_CONFIG.CLIENT_ID,
-      returnTo: environment.baseUri;
+      returnTo: environment.baseUri
     });
   }
 
