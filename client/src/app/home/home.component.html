@@ -1,17 +1,19 @@
-<div class="container">
-    <h2 class="text-center">Welcome to Care Share</h2>
-
-    {{data | json}}
-    <!-- <div class="row"> -->
-    <!-- <a class="col-md-6 nav-link nav-color" routerLink="/stories">
-      <div class="text-center story">
-        STORY
-      </div>
-    </a>
-    <a class="col-md-6 nav-link nav-color" routerLink="/authors">
-      <div class="text-center author">
-        AUTHOR
-      </div>
-    </a> -->
-  <!-- </div> -->
+<div class="container-fluid">
+  <h2 class="text-center">Welcome to Care Share</h2>
+  <div class="row">
+    <div
+      class="col-3 charity"
+      *ngFor="let charity of charities">
+      Charity: {{charity.charityName}}
+      Address:
+      {{charity.mailingAddress.streetAddress1}}
+      {{charity.mailingAddress.stateOrProvince}}
+      {{charity.mailingAddress.postalCode}}
+    </div>
+  </div>
 </div>
+
+<!-- stateOrProvince": "PA",
+      "city": "Philadelphia",
+      "postalCode": "19133",
+      "streetAddress1": "2637 North Fifth Street", -->

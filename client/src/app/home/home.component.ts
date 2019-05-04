@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  data = []
+  charities = []
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
@@ -15,6 +15,6 @@ export class HomeComponent implements OnInit {
   }
 
   getData() {
-    this.dataService.getData().subscribe(data => this.data = data);
+    this.dataService.getData().subscribe(data => this.charities = data);
   }
 }
