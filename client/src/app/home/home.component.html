@@ -1,14 +1,16 @@
 <div class="container-fluid">
   <h2 class="text-center">Welcome to Care Share</h2>
+  <input
+    [(ngModel)]="searchText"
+    placeHolder="search">
   <div class="row">
-    <div
-      class="col-3 charity"
-      *ngFor="let charity of charities">
-      Charity: {{charity.charityName}}
-      Address:
-      {{charity.mailingAddress.streetAddress1}}
-      {{charity.mailingAddress.stateOrProvince}}
-      {{charity.mailingAddress.postalCode}}
+    <div class="col-4 charity" *ngFor="let charity of charities | filter: searchText">
+      <h6>{{charity.charityName}}</h6>
+      <p>
+        {{charity.mailingAddress.streetAddress1}}
+        {{charity.mailingAddress.stateOrProvince}}
+        {{charity.mailingAddress.postalCode}}
+      </p>
     </div>
   </div>
 </div>

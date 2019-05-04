@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   charities = []
+searchText: string;
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
@@ -17,4 +18,5 @@ export class HomeComponent implements OnInit {
   getData() {
     this.dataService.getData().subscribe(data => this.charities = data);
   }
+
 }
