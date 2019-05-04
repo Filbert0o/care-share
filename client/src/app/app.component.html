@@ -18,9 +18,9 @@
     <ng-template [ngIf]="!auth.loggingIn">
       <button *ngIf="!auth.loggedIn" class='btn btn-primary' (click)="auth.login()">Log In</button>
       <span *ngIf="auth.loggedIn && auth.userProfile">
-        {{ auth.userProfile.name }}
-          <mat-icon class="toolbar-icon account">account_circle</mat-icon>
-        <span class="divider">|</span>
+        <mat-icon class="toolbar-icon account align-middle">account_circle</mat-icon>
+         {{ auth.userProfile.name }}
+        <span class="divider"> | </span>
         <a [style.cursor]="'pointer'" (click)="auth.logout()">Log Out</a>
       </span>
     </ng-template>

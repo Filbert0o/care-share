@@ -1,7 +1,7 @@
-<div class="container">
-    <h2 class="text-center">Welcome to Care Share</h2>
+<div class="container-fluid">
+  <h2 class="text-center">Welcome to Care Share</h2>
 
-    {{data | json}}
+    <!-- {{data | json}} -->
     <!-- <div class="row"> -->
     <a class="col-md-6 nav-link nav-color" routerLink="/calander">
       <div class="text-center story">
@@ -14,4 +14,18 @@
       </div>
     </a>  -->
   <!-- </div> -->
+  <mat-form-field appearance="outline">
+    <input
+      matInput
+      [(ngModel)]="searchText"
+      placeholder="Search">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+  <div class="list-group">
+    <div
+      class="list-group-item"
+      *ngFor="let charity of charities | filter: searchText">
+      <a [href]="charity.charityNavigatorURL">{{charity.charityName}}</a>
+    </div>
+  </div>
 </div>

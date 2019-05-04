@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './home/home.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { NgbModule, NgbModalModule } from "@ng-bootstrap/ng-bootstrap";
 import { MaterialModule } from "./material.module";
@@ -18,6 +19,7 @@ import { adapterFactory } from "angular-calendar/date-adapters/date-fns";
 import { CalanderComponent } from './calander/calander.component';
 import { FlatpickrModule } from "angularx-flatpickr";
 import { CrawlerComponent } from './crawler/crawler.component';
+
 
 
 
@@ -31,6 +33,7 @@ import { CrawlerComponent } from './crawler/crawler.component';
   ],
   imports: [
     BrowserModule,
+    Ng2SearchPipeModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
