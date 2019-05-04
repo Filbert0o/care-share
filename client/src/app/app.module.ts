@@ -9,15 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './home/home.component';
-import { StoriesModule } from './stories/stories.module';
-import { AuthorsModule } from './authors/authors.module';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MaterialModule } from "./material.module";
+import { CallbackComponent } from './callback/callback.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, CallbackComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -25,8 +24,6 @@ import { MaterialModule } from "./material.module";
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    StoriesModule,
-    AuthorsModule,
     NgbModule,
     MaterialModule,
     ToastrModule.forRoot()
