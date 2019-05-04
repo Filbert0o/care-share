@@ -10,13 +10,25 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './home/home.component';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbModalModule } from "@ng-bootstrap/ng-bootstrap";
 import { MaterialModule } from "./material.module";
 import { CallbackComponent } from './callback/callback.component';
+import { CalendarModule, DateAdapter } from "angular-calendar";
+import { adapterFactory } from "angular-calendar/date-adapters/date-fns";
+import { CalanderComponent } from './calander/calander.component';
+import { FlatpickrModule } from "angularx-flatpickr";
+import { CrawlerComponent } from './crawler/crawler.component';
+
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CallbackComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    CallbackComponent,
+    CalanderComponent,
+    CrawlerComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -24,9 +36,15 @@ import { CallbackComponent } from './callback/callback.component';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
+    NgbModalModule,
     MaterialModule,
+    FlatpickrModule.forRoot(),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }),
     ToastrModule.forRoot(),
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

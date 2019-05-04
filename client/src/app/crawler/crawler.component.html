@@ -1,0 +1,11 @@
+<p>
+  crawler works!
+</p>
+
+<div *ngIf="this.crawler !== []">
+  <div *ngFor="let data of crawler">
+    <div *ngFor="let item of data">
+      {{item}}
+    </div>
+  </div>
+</div>

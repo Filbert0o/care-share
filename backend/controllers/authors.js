@@ -1,72 +1,72 @@
 const express = require('express');
 
-// create Route instance for Authors
+// create Route instance for Events
 const router = express.Router();
 
-// Load Author model
+// Load Event model
 
-import Author from '../models/Author';
+import Event from '../models/Event';
 
-router.get('/test', (req, res) => res.json({ msg: 'Author Works!' }));
+router.get('/test', (req, res) => res.json({ msg: 'Event Works!' }));
 
 router.get('/', (req, res) => {
-	Author.find()
-		.then((authors) => res.json(authors))
+	Event.find()
+		.then((events) => res.json(events))
 		.catch((err) =>
 			res.status(404).json({
-				noauthorsfound: 'No authors found'
+				noeventsfound: 'No events found'
 			}).send(err)
 		);
 });
 
 router.get('/:id', (req, res) => {
-	Author.findById(req.params.id)
-		.then((author) => res.json(author))
+	Event.findById(req.params.id)
+		.then((event) => res.json(event))
 		.catch((err) =>
 			res.status(404).json({
-				noauthorfound: 'No author found with that ID'
+				noeventfound: 'No event found with that ID'
 			}).send(err)
 		);
 });
 
 router.post('/create', (req, res) => {
-	const newAuthor = new Author({
-		name: req.body.name,
-		gender: req.body.gender ? req.body.gender : 'Not Specified',
-		birthdate: req.body.birthdate ? req.body.birthdate : Date.now(),
+	const newEvent = new Event({
+		title: req.body.title,
+		startDate: req.body.startDate ? req.body.startDate : 'Not Specified',
+		endDate: req.body.endDate ? req.body.endDate : Date.now(),
 		description: req.body.description ? req.body.description : 'Vague',
 		avatar: req.body.avatar
 			? req.body.avatar
 			: 'http://asapct.org/wp-content/uploads/2016/02/blank-avatar.jpg'
 	});
 
-	newAuthor
+	newEvent
 		.save()
-		.then((author) => res.json(author))
+		.then((event) => res.json(event))
 		.catch((err) => console.log(err));
 });
 
 router.delete('/:id', (req, res) => {
-	Author.findById(req.params.id)
-		.then((author) => {
-			author.remove().then(() =>
+	Event.findById(req.params.id)
+		.then((event) => {
+			event.remove().then(() =>
 				res.json({
 					success: true
 				})
 			);
 			res.json({
-				msg: `${author.name} is deleted`
+				msg: `${event.name} is deleted`
 			});
 		})
 		.catch((err) =>
 			res.status(404).json({
-				noauthorfound: 'No author found with that ID'
+				noeventfound: 'No event found with that ID'
 			}).send(err)
 		);
 });
 
 router.put('/update', (req, res) => {
-	Author.findByIdAndUpdate(req.body._id, req.body, function(err, user) {
+	Event.findByIdAndUpdate(req.body._id, req.body, function(err) {
 		if (err) throw err;
 
 		res.json({
