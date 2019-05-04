@@ -3,18 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  baseUrl: "http://localhost:3001",
-  baseUri: "http://localhost:4200",
-  auth: {
-    url: "https://gojitodo.auth0.com",
-    clientID: "ENfu996a2uaw5LDuGq56X1roXlezz61X",
-    domain: "gojitodo.auth0.com",
-    audience: "http://localhost:3000/api",
-    redirect: "http://localhost:4500/callback",
-    scope: "openid profile user_metadata app_metadata email"
-  }
-};
+         production: false,
+         baseUrl: "http://localhost:3001",
+         baseUri: "http://localhost:4200",
+         auth: {
+           url: "https://gojitodo.auth0.com",
+           clientID: "VANeB8AM0hUWxi3YLpYlrUj0uTg7FoAF",
+           domain: "gojitodo.auth0.com",
+           audience: "http://localhost:3001/api",
+           redirect: "http://localhost:4500/callback",
+           scope: "openid profile user_metadata app_metadata email"
+         }
+       };
 
 /*
  * For easier debugging in development mode, you can import the following file
