@@ -20,7 +20,7 @@ import { environment } from '../../environments/environment';
 interface AuthConfig {
   CLIENT_ID: string;
   CLIENT_DOMAIN: string;
-  AUDIENCE: string;
+  // AUDIENCE: string;
   REDIRECT: string;
   SCOPE: string;
 }
@@ -28,7 +28,7 @@ interface AuthConfig {
 export const AUTH_CONFIG: AuthConfig = {
   CLIENT_ID: `${environment.auth.clientID}`,
   CLIENT_DOMAIN: `${environment.auth.domain}`, // e.g., you.auth0.com
-  AUDIENCE: `${environment.auth.audience}`, // e.g., http://localhost:8083/api/
+  // AUDIENCE: `${environment.auth.audience}`, // e.g., http://localhost:8083/api/
   REDIRECT: `${environment.auth.redirect}`,
   SCOPE: `${environment.auth.scope}`
 };

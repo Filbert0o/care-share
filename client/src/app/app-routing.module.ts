@@ -6,7 +6,9 @@ import { CallbackComponent } from './callback/callback.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'callback', component: CallbackComponent}
+  { path: 'callback', component: CallbackComponent},
+  { path: '**', redirectTo: '', pathMatch: 'full' }
+
 ];
 
 @NgModule({

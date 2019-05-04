@@ -10,10 +10,10 @@ export const environment = {
          baseUrl: "http://localhost:3001",
          baseUri: "http://localhost:4200",
          auth: {
-           url: "https://gojitodo.auth0.com",
+           url: "https://care-share.auth0.com",
            clientID: "VANeB8AM0hUWxi3YLpYlrUj0uTg7FoAF",
-           domain: "gojitodo.auth0.com",
-           audience: "http://localhost:3001/api",
+           domain: "care-share.auth0.com",
+          //  audience: "http://localhost:3001/api",
            redirect: "http://localhost:4200/callback",
            scope: "openid profile user_metadata app_metadata email"
          }

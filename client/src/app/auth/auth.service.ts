@@ -16,7 +16,7 @@ export class AuthService {
     domain: AUTH_CONFIG.CLIENT_DOMAIN,
     responseType: 'token id_token',
     redirectUri: AUTH_CONFIG.REDIRECT,
-    audience: AUTH_CONFIG.AUDIENCE,
+    // audience: AUTH_CONFIG.AUDIENCE,
     scope: AUTH_CONFIG.SCOPE
   });
   accessToken: string;
@@ -58,12 +58,14 @@ export class AuthService {
         window.location.hash = '';
         this._getProfile(authResult);
         this.router.navigate(['']);
-      } else if (err) {
-        // this._clearRedirect();
-        console.error(`Error authenticating: ${err.error}`);
-        this.router.navigate(['']);
       }
-    });
+    })
+      // } else if (err) {
+      //   // this._clearRedirect();
+      //   console.error(`Error authenticating: ${err.error}`);
+      //   this.router.navigate(['']);
+      // }
+    // });
   }
 
   // public getProfile(cb): void {
