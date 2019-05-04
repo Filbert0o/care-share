@@ -7,16 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  charities = []
-  columns=["name"]
+  charities = [];
   searchText: string;
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.getData()
+    this.getData();
   }
 
   getData() {
-    this.dataService.getData().subscribe(data => this.charities = data);
+    this.dataService.getData().subscribe((data) => (this.charities = data));
   }
 }
