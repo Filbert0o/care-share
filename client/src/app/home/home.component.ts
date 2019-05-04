@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   charities = []
+  columns=["name"]
+  searchText: string;
   constructor(private dataService: DataService) { }
 
   ngOnInit() {

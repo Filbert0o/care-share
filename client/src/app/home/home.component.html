@@ -1,19 +1,18 @@
 <div class="container-fluid">
   <h2 class="text-center">Welcome to Care Share</h2>
-  <div class="row">
+
+  <mat-form-field appearance="outline">
+    <input
+      matInput
+      [(ngModel)]="searchText"
+      placeholder="Search">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+  <div class="list-group">
     <div
-      class="col-3 charity"
-      *ngFor="let charity of charities">
-      Charity: {{charity.charityName}}
-      Address:
-      {{charity.mailingAddress.streetAddress1}}
-      {{charity.mailingAddress.stateOrProvince}}
-      {{charity.mailingAddress.postalCode}}
+      class="list-group-item"
+      *ngFor="let charity of charities | filter: searchText">
+      <a [href]="charity.charityNavigatorURL">{{charity.charityName}}</a>
     </div>
   </div>
 </div>
-
-<!-- stateOrProvince": "PA",
-      "city": "Philadelphia",
-      "postalCode": "19133",
-      "streetAddress1": "2637 North Fifth Street", -->
