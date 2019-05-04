@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: "http://localhost:3000",
+  baseUrl: "http://localhost:3001",
+  baseUri: "http://localhost:4200",
   auth: {
     url: "https://gojitodo.auth0.com",
     clientID: "ENfu996a2uaw5LDuGq56X1roXlezz61X",

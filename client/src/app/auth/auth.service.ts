@@ -4,7 +4,7 @@ import { BehaviorSubject, Subscription, of, timer } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 import { AUTH_CONFIG } from './auth.config';
 import * as auth0 from 'auth0-js';
-import { ENV } from './../core/env.config';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -157,7 +157,7 @@ export class AuthService {
     // End Auth0 authentication session
     this._auth0.logout({
       clientId: AUTH_CONFIG.CLIENT_ID,
-      returnTo: ENV.BASE_URI
+      returnTo: environment.baseUri;
     });
   }
 

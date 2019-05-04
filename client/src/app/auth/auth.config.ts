@@ -15,7 +15,6 @@
 //   REDIRECT: `${ENV.BASE_URI}/callback`,
 //   SCOPE: 'openid email profile read:users read:user_idp_tokens'
 // };
-import { ENV } from '../core/env.config';
 import { environment } from '../../environments/environment';
 
 interface AuthConfig {
