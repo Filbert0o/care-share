@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 // Create Schema
-const AuthorSchema = new Schema({
+const EventSchema = new Schema({
   name: {
     type: String,
     required: true
@@ -21,4 +21,4 @@ const AuthorSchema = new Schema({
   }
 }, {timestamps: true});
 
-export default mongoose.model('authors', AuthorSchema);
+export default mongoose.model('events', EventSchema);

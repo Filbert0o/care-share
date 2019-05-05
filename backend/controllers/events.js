@@ -31,9 +31,9 @@ router.get('/:id', (req, res) => {
 
 router.post('/create', (req, res) => {
 	const newEvent = new Event({
-		title: req.body.title,
-		startDate: req.body.startDate ? req.body.startDate : 'Not Specified',
-		endDate: req.body.endDate ? req.body.endDate : Date.now(),
+		// title: req.body.title,
+		// startDate: req.body.startDate ? req.body.startDate : 'Not Specified',
+		// endDate: req.body.endDate ? req.body.endDate : Date.now(),
 		description: req.body.description ? req.body.description : 'Vague',
 		avatar: req.body.avatar
 			? req.body.avatar

@@ -10,7 +10,7 @@ import busboyBodyParser from 'busboy-body-parser';
 
 // Import routes here
 import stories from './controllers/stories';
-import authors from './controllers/authors';
+import events from './controllers/events';
 
 // Create our app instances
 const app = express();
@@ -32,7 +32,7 @@ app.use(busboy());
 app.use(busboyBodyParser());
 // Use Multiple Routes
 app.use('/api/stories', stories);
-app.use('/api/authors', authors);
+app.use('/api/authors', events);
 
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname, '../dist/client/index.html'));
