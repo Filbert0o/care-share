@@ -40,11 +40,11 @@ const colors: any = {
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "app-calander",
-  templateUrl: "./calander.component.html",
-  styleUrls: ["./calander.component.scss"]
+  selector: "app-calendar",
+  templateUrl: "./calendar.component.html",
+  styleUrls: ["./calendar.component.scss"]
 })
-export class CalanderComponent {
+export class CalendarComponent {
   @ViewChild("modalContent") modalContent: TemplateRef<any>;
 
   view: CalendarView = CalendarView.Month;

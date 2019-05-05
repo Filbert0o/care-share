@@ -16,7 +16,7 @@ import { MaterialModule } from "./material.module";
 import { CallbackComponent } from './callback/callback.component';
 import { CalendarModule, DateAdapter } from "angular-calendar";
 import { adapterFactory } from "angular-calendar/date-adapters/date-fns";
-import { CalanderComponent } from './calander/calander.component';
+import { CalendarComponent } from './calendar/calendar.component';
 import { FlatpickrModule } from "angularx-flatpickr";
 import { CrawlerComponent } from './crawler/crawler.component';
 
@@ -28,7 +28,7 @@ import { CrawlerComponent } from './crawler/crawler.component';
     AppComponent,
     HomeComponent,
     CallbackComponent,
-    CalanderComponent,
+    CalendarComponent,
     CrawlerComponent
   ],
   imports: [
